@@ -1,4 +1,6 @@
 from base_caching import BaseCaching
+
+
 class BasicCache(BaseCaching):
     def put(self, key, item):
         """
@@ -23,8 +25,9 @@ class BasicCache(BaseCaching):
             key: The key associated with the item to retrieve.
 
         Returns:
-            The value associated with the provided key, or None if the key is None or not found in the cache.
+            The value associated with the provided key,
+            or None if the key is None or not found in the cache.
         """
         if key is None or key not in self.cache_data:
-            return None  # Return None if key is None or not found in cache_data
+            return None
         return self.cache_data[key]
